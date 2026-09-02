@@ -85,7 +85,14 @@ export class NetworkWMService extends NetMDService {
             definition: matchedDevice,
         });
         this.database = await DatabaseAbstraction.create(fs, matchedDevice);
-        this.name = matchedDevice.name;
+        // Sony reused the same USB product ID across the NW-HD1/NW-HD2/NW-HD3 line (all three
+        // report PID 0x0210 on at least some firmware revisions, despite networkwm-js's device
+        // table only labelling that PID "Sony NW-HD3"), so a device reporting that specific PID
+        // could genuinely be any of the three models. Broaden the displayed name accordingly
+        // rather than definitively claiming it's an HD3 when it might not be. This is done here
+        // (in our own tracked source) rather than editing networkwm-js's device table directly,
+        // since that's a third-party dependency that would lose the fix on a fresh `npm install`.
+        this.name = matchedDevice.name === 'Sony NW-HD3' ? 'Sony NW-HD1/2/3' : matchedDevice.name;
         Object.defineProperty(globalThis, 'signNWJS', {
             configurable: true,
             writable: true,value: async () => {

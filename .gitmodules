@@ -1,3 +1,4 @@
 [submodule "webminidisc"]
 	path = webminidisc
-	url = https://github.com/asivery/webminidisc.git
+	url = https://github.com/Sean-Townsend/webminidisc.git
+	branch = sean-townsend-changes

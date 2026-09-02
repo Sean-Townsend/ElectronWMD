@@ -4,6 +4,10 @@ if [ "$(uname)" == "Linux" ]; then
     SED=sed
 elif [ "$(uname)" == "Darwin" ]; then
     SED=gsed
+elif [[ "$(uname)" == MINGW* || "$(uname)" == MSYS* || "$(uname)" == CYGWIN* ]]; then
+    # Git Bash / MSYS2 / Cygwin on Windows: uname reports e.g. "MINGW64_NT-10.0-...".
+    # Git for Windows bundles a GNU-compatible sed that supports `-i -e`.
+    SED=sed
 fi
 
 

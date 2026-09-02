@@ -1,6 +1,6 @@
 {
   "name": "electronwmd",
-  "version": "0.5.2-1.5.4",
+  "version": "0.5.2-2.0.0",
   "description": "Electron version of WebMinidisc Pro",
   "main": "dist/main.js",
   "scripts": {
@@ -19,7 +19,8 @@
     "compression": "store",
     "asar": false,
     "win": {
-      "icon": "./res/icon.ico"
+      "icon": "./res/icon.ico",
+      "signAndEditExecutable": false
     },
     "linux": {
       "icon": "./res/icon.png"

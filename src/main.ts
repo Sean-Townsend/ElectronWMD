@@ -3,6 +3,7 @@ import { importKeys } from 'networkwm-js';
 import path from 'path';
 import os from 'os';
 import fs from 'fs';
+import { pathToFileURL } from 'url';
 import { EWMDHiMD, EWMDNetMD } from './wmd/translations';
 import { Codec, NetMDFactoryService } from './wmd/original/services/interfaces/netmd';
 import fetch from 'node-fetch';
@@ -212,7 +213,11 @@ async function createWindow() {
 
     await integrate(window);
     window.setMenuBarVisibility(false);
-    await window.loadURL('file://' + getOfRenderer('index.html')); //Can't use the `sandbox://` protocol - index.html would (incorrectly) redirect to https
+    // Can't use the `sandbox://` protocol - index.html would (incorrectly) redirect to https.
+    // Use pathToFileURL rather than string-concatenating 'file://' + path: on Windows,
+    // path.join produces backslashes, which naive concatenation turns into a malformed
+    // file:// URL that Chromium rejects ("Not allowed to load local resource").
+    await window.loadURL(pathToFileURL(getOfRenderer('index.html')).toString());
     window.setTitle('Electron WMD');
 
     const store = new Store();

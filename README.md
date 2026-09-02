@@ -5,6 +5,31 @@ Electron version of [Web MiniDisc Pro](https://github.com/asivery/webminidisc)
 For all the people who want to use all of Web MiniDisc Pro's features but don't want to use Google Chrome
 ____
 
+## This fork (Sean Townsend)
+
+This is a fork of [asivery/ElectronWMD](https://github.com/asivery/ElectronWMD), built out for use with a Sony NW-HD1 Network Walkman. The `webminidisc` submodule points at [Sean-Townsend/webminidisc](https://github.com/Sean-Townsend/webminidisc) rather than the original, since most of the changes live there.
+
+### v2.0.0
+
+**New features**
+- Track list is now virtualized (only visible rows are ever mounted), fixing severe scrolling lag on large libraries (3000+ tracks)
+- Added Tracks / Albums / Artists view modes. Albums/Artists are re-grouped from each track's own tags rather than the device's stored group boundaries, which fixes albums getting fragmented into many single-track groups when tagging is slightly inconsistent between tracks (e.g. different casing/whitespace in the album tag)
+- Albums/artists are collapsible, with collapse state tracked separately per view mode and defaulting to fully collapsed on a fresh connection
+- Added a confirmation dialog before ungrouping an album, worded accurately for devices where groups are virtual (e.g. Network Walkman) vs real (NetMD/HiMD)
+
+**Fixes**
+- Fixed collapsed albums silently re-expanding after deleting, renaming, or uploading tracks
+- Fixed the album collapse/delete buttons sometimes doing nothing on click - caused by `react-dropzone`'s keyboard focus tracking intercepting the click event before it reached the button
+- Fixed track numbers being clipped to a single digit on devices with more than 9 tracks
+- Fixed the "Title" column header not lining up with the actual track/album title text
+- Fixed the upload button floating over the last track in the list (moved it into the toolbar)
+- Fixed the playback transport bar showing a misleading "ready to play" state on devices that don't support remote playback control (it's now hidden entirely on those devices)
+- Fixed Sony NW-HD1, NW-HD2, and NW-HD3 all being labelled "NW-HD3" - Sony reused the same USB product ID across all three models
+- Fixed a Windows-specific bug in the Electron main process where loading `index.html` via string-concatenated `file://` URLs broke on Windows-style backslash paths (`Not allowed to load local resource`) - fixed to use `pathToFileURL`
+- Fixed `run-fixes.sh`'s `uname` detection not recognizing Git Bash/MSYS2/Cygwin on Windows
+- Fixed packaging (`electron-builder`) failing on Windows when it tried to download macOS code-signing tools it doesn't need
+____
+
 ## Note for users only
 
 If you're not a developer, and are just looking for a pre-built app, you can download it from the [releases section](https://github.com/asivery/ElectronWMD/releases).
@@ -18,7 +43,7 @@ The project consists of two parts:
 - The renderer (GUI) code (The Web MiniDisc project itself)
 
 This repository contains only the main electron app.
-Upon building, it will clone the renderer repository ([https://github.com/asivery/webminidisc](https://github.com/asivery/webminidisc)), and build that too.
+Upon building, it will clone the renderer repository (this fork uses [https://github.com/Sean-Townsend/webminidisc](https://github.com/Sean-Townsend/webminidisc), branch `sean-townsend-changes` - see `.gitmodules`), and build that too.
 
 You can:
 - Install node modules (`npm i`) (the `--legacy-peer-deps` switch might be required for newer node.js versions)

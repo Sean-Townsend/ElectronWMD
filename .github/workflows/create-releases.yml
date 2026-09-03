@@ -1,6 +1,9 @@
 name: Build/release
 
-on: [ push, workflow_dispatch ]
+# Disabled auto-trigger on push: this fork builds/packages locally rather than via CI, and this
+# workflow was failing on every push (missing setup this fork doesn't need, e.g. Wine/cross-build
+# tooling assumptions from upstream). Kept available via workflow_dispatch if ever needed.
+on: [ workflow_dispatch ]
 
 jobs:
   release:

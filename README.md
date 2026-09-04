@@ -14,7 +14,6 @@ Built as a fork of Electron [Web MiniDisc Pro] (https://github.com/asivery/webmi
 💾 Designed for Windows  
 🚫 No SonicStage required
 
-📥 Download
 
 ![nwhd1_start_S](docs/images/nwhd1_start_S.png)
 
@@ -36,6 +35,8 @@ Built as a fork of Electron [Web MiniDisc Pro] (https://github.com/asivery/webmi
 ![nwhd1_upload_S](docs/images/nwhd1_upload_S.png)
 
 
+
+📥 Download
 
 Windows users: you don't need to build anything.
 Download the latest Windows release from the Releases page, run the executable, connect your NW-HD1 and start managing your music.

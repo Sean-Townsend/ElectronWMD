@@ -8,10 +8,11 @@ I'm not trying to reinvent the wheel — I've taken great software and tried to 
 
 Huge thanks to everyone who has contributed to the projects that came before this one and is helping to keep these Sony Network Walkman players alive.
 
-
-
-
+<br>
+<br>
 Sony NW-HD1/2/3 Music Manager
+<br>
+<br>
 
 A modern Windows application for managing music on the Sony NW-HD1 Network Walkman without needing Sony SonicStage.
 Built as a fork of Electron [Web MiniDisc Pro] (https://github.com/asivery/webminidisc), with additional development focused on the NW-HD1.

@@ -40,6 +40,8 @@ This project provides a modern Windows interface for managing your NW-HD1, while
 
 🔍 Efficiently handle large music libraries
 
+🔤 Quickly jump through tracks, albums and artists by pressing a letter
+
 💻 Designed to run on Windows
 
 🚫 No need to use Google Chrome

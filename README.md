@@ -1,3 +1,14 @@
+First things first
+
+This project would not be possible without the great work already done by many people in the community, particularly Asivery and Stefano Brilli, whose work has made it possible to continue using and supporting these fantastic Sony players long after their original software became obsolete.
+
+I've built on that existing work and made some improvements and changes, particularly around the NW-HD1 (as that's the only hardware I have), to make the software easier to use and more suitable for Windows users.
+
+I'm not trying to reinvent the wheel — I've taken great software and tried to make it a little better for NW-HD1 owners.
+
+Huge thanks to everyone who has contributed to the projects that came before this one and is helping to keep these Sony Network Walkman players alive.
+
+
 Sony NW-HD1/2/3 Music Manager
 
 A modern Windows application for managing music on the Sony NW-HD1 Network Walkman without needing Sony SonicStage.

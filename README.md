@@ -4,16 +4,17 @@ A modern Windows application for managing music on the Sony NW-HD1 Network Walkm
 Built as a fork of Electron [Web MiniDisc Pro] (https://github.com/asivery/webminidisc), with additional development focused on the NW-HD1.
 
 ✨ Features
-🎵 Upload music to your NW-HD1
-📥 Download music from your NW-HD1
-🗑️ Delete tracks
-✏️ Edit track metadata
-📚 Browse your library by Tracks, Albums or Artists
-🔍 Manage large music libraries efficiently
-💾 Designed for Windows
-🚫 No SonicStage required
-📥 Download
 
+- 🎵 Upload music to your NW-HD1
+- 📥 Download music from your NW-HD1
+- 🗑️ Delete tracks
+- ✏️ Edit track metadata
+- 📚 Browse your library by Tracks, Albums or Artists
+- 🔍 Manage large music libraries efficiently
+- 💾 Designed for Windows
+- 🚫 No SonicStage required
+
+📥 Download
 
 ![nwhd1_start_S](docs/images/nwhd1_start_S.png)
 

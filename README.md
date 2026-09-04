@@ -5,14 +5,14 @@ Built as a fork of Electron [Web MiniDisc Pro] (https://github.com/asivery/webmi
 
 ✨ Features
 
-- 🎵 Upload music to your NW-HD1
-- 📥 Download music from your NW-HD1
-- 🗑️ Delete tracks
-- ✏️ Edit track metadata
-- 📚 Browse your library by Tracks, Albums or Artists
-- 🔍 Manage large music libraries efficiently
-- 💾 Designed for Windows
-- 🚫 No SonicStage required
+🎵 Upload music to your NW-HD1  
+📥 Download music from your NW-HD1  
+🗑️ Delete tracks  
+✏️ Edit track metadata  
+📚 Browse your library by Tracks, Albums or Artists  
+🔍 Manage large music libraries efficiently  
+💾 Designed for Windows  
+🚫 No SonicStage required
 
 📥 Download
 

@@ -6,7 +6,7 @@ A modern Windows application for managing music on the Sony NW-HD1 Network Walkm
 
 ## First things first
 
-This project would not be possible without the great work already done by many people in the community, particularly Asivery and Stefano Brilli.
+This project would not have been possible without the great work already done by many people in the community, particularly Asivery and Stefano Brilli.
 
 I have built on their already excellent work and made a number of improvements, particularly for the Sony NW-HD1, to make the software easier to use and help keep these fantastic Sony players alive.
 
@@ -146,12 +146,12 @@ If you still have an NW-HD1/2/3 sitting in a drawer, hopefully this gives you a 
 
 The project consists of two parts:
 
-The main Electron application
-The renderer (the Web MiniDisc project itself)
+* The main Electron application
+* The renderer (the Web MiniDisc project itself)
 
-This repository contains the main Electron application. When building, it will clone the renderer repository and build that as well.
+This repository contains the main Electron application. When building, it clones the renderer repository and builds that as well.
 
-The webminidisc submodule points to the sean-townsend-changes branch of the Sean-Townsend Web MiniDisc fork.
+The `webminidisc` submodule points to the `sean-townsend-changes` branch of the Sean-Townsend Web MiniDisc fork.
 
 <br> <br>
 
@@ -161,11 +161,15 @@ You will need Node.js and the appropriate development tools for your platform.
 
 Install the Node modules:
 
+```bash
 npm i
+```
 
-Depending on your Node.js version, the --legacy-peer-deps switch may be required:
+Depending on your Node.js version, the `--legacy-peer-deps` switch may be required:
 
+```bash
 npm i --legacy-peer-deps
+```
 
 <br> <br>
 
@@ -173,79 +177,110 @@ npm i --legacy-peer-deps
 
 Start the development version:
 
+```bash
 npm start
+```
 
 Build a production version:
 
+```bash
 npm run dist
+```
 
 Build the macOS version:
 
+```bash
 npm run dist-mac
+```
 
 <br> <br>
 
 ## Important development changes
 
-Web MiniDisc Pro relies on older versions of packages including React and Material UI.
+Web MiniDisc Pro relies on older versions of packages, including React and Material UI.
 
-Depending on your Node.js version, build-renderer.sh may need to use:
+Depending on your Node.js version, `build-renderer.sh` may need to use:
 
+```bash
 npm i --legacy-peer-deps
+```
 
 instead of:
 
+```bash
 npm i
+```
 
 <br> <br>
 
 ## macOS development
-Install Xcode Command Line Tools & Homebrew
+
+### Install Xcode Command Line Tools & Homebrew
 
 In Terminal:
 
-xcode-select install
+```bash
+xcode-select --install
+```
 
-and:
+Then install Homebrew:
 
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-Install gcc & libvips
+```
+
+### Install gcc & libvips
 
 In Terminal:
 
+```bash
 brew install --build-from-source gcc
+```
 
 Once this has finished:
 
+```bash
 brew install vips
+```
 
 The second command may install gcc again using a pre-built binary. This is normal if gcc is required by vips.
 
-Build
+### Build
 
 Install the dependencies:
 
+```bash
 npm i --legacy-peer-deps
+```
 
 Then create the macOS binary packages:
 
+```bash
 npm run dist-mac
-De-quarantine the application
+```
+
+### De-quarantine the application
 
 macOS may quarantine locally built applications.
 
 To remove the quarantine attribute:
 
+```bash
 xattr -d com.apple.quarantine "/path/to/your.app"
-Sign the binary
+```
+
+### Sign the binary
 
 To code-sign the local binary with a self-signing certificate:
 
+```bash
 codesign --sign - --force --deep "/path/to/your.app"
+```
 
 That should be everything required to build and run the application on macOS.
 
 <br> <br>
+
 
 ## Issues and support
 

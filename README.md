@@ -1,6 +1,6 @@
 # **Sony NW-HD1 Music Manager**
 
-A modern Windows application for managing music on the Sony NW-HD1 Network Walkman without needing Sony SonicStage.
+A modern Windows application for managing music on the Sony NW-HD1/2/3 Network Walkman without needing Sony SonicStage.
 
 <br> <br>
 
@@ -8,7 +8,7 @@ A modern Windows application for managing music on the Sony NW-HD1 Network Walkm
 
 This project would not have been possible without the great work already done by many people in the community, particularly Asivery and Stefano Brilli.
 
-I have built on their already excellent work and made a number of improvements, particularly for the Sony NW-HD1, to make the software easier to use and help keep these fantastic Sony players alive.
+I have built on their already excellent work and made a number of improvements, particularly for the Sony NW-HD1 (as that's the only hardware I have), to make the software easier to use and help keep these fantastic Sony players alive.
 
 I'm not trying to reinvent the wheel — I've taken already excellent software and tried to make it a little better for NW-HD1 owners.
 
@@ -79,7 +79,6 @@ Go to the Releases page and download the latest Windows release.
 
 Install/run the application, connect your NW-HD1 and start managing your music.
 
-Windows users: You do not need Node.js, Git, Electron or any development tools to use the pre-built application.
 
 <br> <br>
 
